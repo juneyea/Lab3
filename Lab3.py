@@ -8,11 +8,11 @@ def bubble_sort(arr, sorting_order):
 
     # Copy input list to results list
     arr_result = arr.copy()
-
     # Get number of elements in the list
     n = len(arr_result)
-    skib = list(arr_result)
-
+    
+    i = 0
+    
     if 0 < n < 10:
         # Traverse through all array elements
         for i in range(n - 1):
@@ -30,20 +30,19 @@ def bubble_sort(arr, sorting_order):
                 elif sorting_order == SORT_DESCENDING:
                     if arr_result[j] < arr_result[j + 1]:
                         arr_result[j], arr_result[j + 1] = arr_result[j + 1], arr_result[j]
-
+                
                 else:
                     # Return an empty array
                     arr_result = []
 
-    elif n >10 :
+       
+    elif n >= 10 :
         arr_result = 1
     elif n == 0:
         arr_result = 0
-    elif list(arr_result)
-        arr_result == 2
     else:
         arr_result = -1
-
+    
     return arr_result
 
 def main():

@@ -31,18 +31,17 @@ def test_bubble_sort_invalid():
 
 def test_bubble_more_ten():
     result = []
-    input_arr = [20,10,2,24,5,1,8,3,34,11,14.36]
+    input_arr = [20,10,2,24,5,1,8,3,34,11,14,36]
     result = test.bubble_sort(input_arr,3)
     assert (result == 1)
 
 def test_bubble_zero():
-    
     input_arr = []
     result = test.bubble_sort(input_arr,4)
     assert (result == 0 )
 
 def test_bubble_not_integer():
     result = []
-    input_arr = [1.0,2,3,4,4,4,2.3]
-    result = test.bubble_sort(input_arr,5)
+    input_arr = [1.5,2,3,4,5,7.3]
+    result = test.bubble_sort(input_arr,6)
     assert (result == 2 )
