@@ -8,6 +8,7 @@ employee_data = [
     {"name": "Peter", "age": 40, "department": "Sales", "salary": 60000}
 ]
 
+
 def get_employees_by_age_range(age_lower_limit, age_upper_limit):
     result = []
 
@@ -23,15 +24,22 @@ def calculate_average_salary():
     average = 0
 
     #add your implementation to calculate here
-
-
+    for money in employee_data:
+        total = total + int(money['salary'])
+        average = total/6
+    average = round (average,4)
     return average
 
 def get_employees_by_dept(department):
     result = []
 
-    # Add your implementation from here
+     # Add your implementation from here
 
+    for employee in employee_data:
+            if employee["department"] == department:
+               
+                result.append(employee)
+        
 
     return result
 
